@@ -1,0 +1,161 @@
+/*CSS Variables */
+:root {
+    --primary: #f0ebe7;
+    --dark: #333;
+    --light: #fff;
+    --special: #ba4444;
+    --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+
+html {
+    box-sizing: border-box; /* If we use padding, wont affect width of the element*/
+    font-size: 16px;
+    font-family: poppins, sans-serif;
+    color: var(--dark);
+    background-color: var(--primary);
+    margin: 0px;
+    padding: 0px;
+}
+
+/*General classes*/
+.flex-container {
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.textbox {
+    width: 50%;
+}
+
+.specialColorSpan {
+    color: var(--special);
+}
+
+/*Header*/
+#name {
+    font-size: 1.6rem;
+    height: 3rem;
+    margin-left: 3%;
+}
+
+#name h2 {
+    margin: 0;
+}
+
+/* nav bar*/
+
+header nav ul {
+    display: inline-flex;
+    list-style: none;                
+    justify-content: space-around;
+}
+
+header nav {
+    margin-right: 3%;
+}
+
+nav ul li a {
+    padding: 15px;
+    color: var(--dark);
+    text-decoration: none;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: var(--special);
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Section home */
+
+section {
+    margin-bottom: 4rem;
+}
+
+#myname {
+    width: 500px;
+    margin-left: 5%;
+    font-size: 1.6rem;
+}
+
+#homepage {
+    height: 600px;
+    background-image: url(../images/PSaboutpic.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+/* Section about*/
+
+#imageInAbout {
+    width: 400px;
+    margin: 0 5%;
+}
+
+.tabs {
+    padding-right: 15px;
+    font-weight: bold;
+}
+
+#tab-container {
+    display: inline-flex;
+    position: relative;
+}
+
+.tabs:hover {
+    cursor: pointer;
+}
+
+.tabs h4::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: var(--special);
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    transition: 0.3s;
+}
+
+.tabs h4:hover::after {
+    width: 100%;
+}
+
+
+.tabInfo h4 {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--special);
+}
+
+.tabInfo p {
+    margin-top: 0.25rem;
+    margin-bottom: 0;
+}
+
+#skills {
+    display: block;
+}
+
+#experience {
+    display: none;
+}
+
+#education {
+    display: none;
+}
+/* Section Services*/
+
